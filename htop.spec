@@ -16,7 +16,7 @@ htop is an interactive text-mode process viewer for Linux. It aims to
 be a better 'top'.
 
 %description -l pl
-htop jest interaktywn±, tekstow± przegl±dark± procesów dla Linuxa. Jej
+htop jest interaktywn±, tekstow± przegl±dark± procesów dla Linuksa. Jej
 celem jest bycie lepsz± odmian± 'topu'.
 
 %prep
