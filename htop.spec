@@ -7,7 +7,6 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
 # Source0-md5:	2e958d3658c45e057ffe11d24f4509d4
-# Source0-size:	120228
 URL:		http://htop.sourceforge.net/
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
