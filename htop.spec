@@ -1,12 +1,12 @@
 Summary:	An interactive process viewer
 Summary(pl):	Interaktywna przegl±darka procesów
 Name:		htop
-Version:	0.5
+Version:	0.5.1
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
-# Source0-md5:	2e958d3658c45e057ffe11d24f4509d4
+# Source0-md5:	3c41c6a3c2a052ca2327996a429e80db
 URL:		http://htop.sourceforge.net/
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
