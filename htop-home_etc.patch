@@ -1,0 +1,13 @@
+--- htop-0.5.2/Settings.c~	2005-04-09 00:41:32.000000000 +0200
++++ htop-0.5.2/Settings.c	2005-06-08 04:42:24.000000000 +0200
+@@ -29,7 +29,9 @@
+    // TODO: how to get SYSCONFDIR correctly through Autoconf?
+    // char* systemSettings = String_cat(SYSCONFDIR, "/htoprc");
+    // Settings_read(this, systemSettings);
+-   char* home = getenv("HOME");
++   char* home;
++   home = getenv("HOME_ETC");
++   if (!home) home = getenv("HOME");
+    this->userSettings = String_cat(home, "/.htoprc");
+    Settings_read(this, this->userSettings);
+    // free(systemSettings);
