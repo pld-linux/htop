@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
 # Source0-md5:	995e76b7fd18c05fb7fb5ef10a2166ca
+Patch0:		%{name}-desktop.patch
 URL:		http://htop.sourceforge.net/
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -17,10 +18,11 @@ be a better 'top'.
 
 %description -l pl
 htop jest interaktywn±, tekstow± przegl±dark± procesów dla Linuksa. Jej
-celem jest bycie lepsz± odmian± 'topu'.
+celem jest bycie lepsz± odmian± programu 'top'.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
