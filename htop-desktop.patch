@@ -1,0 +1,16 @@
+diff -urN htop-0.6.2.orig/htop.desktop htop-0.6.2/htop.desktop
+--- htop-0.6.2.orig/htop.desktop	2006-05-19 22:36:54.000000000 +0200
++++ htop-0.6.2/htop.desktop	2006-08-25 14:40:10.000000000 +0200
+@@ -4,9 +4,10 @@
+ Name=Htop
+ Type=Application
+ Comment=Show System Processes
++Comment[pl]=Wyświetlanie aktualnego stanu procesów
+ Terminal=true
+ Exec=htop
+-Path=
+ Icon=htop
+-Categories=ConsoleOnly;System;Application;
++Categories=ConsoleOnly;System;Monitor;
+ GenericName=Process Viewer
++# vi: encoding=utf-8
