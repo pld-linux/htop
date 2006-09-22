@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
 Patch0:		%{name}-desktop.patch
 URL:		http://htop.sourceforge.net/
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,6 +28,7 @@ Jej celem jest bycie lepsz± odmian± programu 'top'.
 %{__sed} -i -e 's/curses.h/ncurses\/curses.h/' configure.ac
 
 %build
+%{__aclocal}
 %{__autoconf}
 %configure
 %{__make} \
