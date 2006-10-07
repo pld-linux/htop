@@ -9,9 +9,11 @@ Source0:	http://dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
 # Source0-md5:	989905bb2559cf6404c1b8e8ffa48b15
 Patch0:		%{name}-desktop.patch
 URL:		http://htop.sourceforge.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
+BuildRequires:	gcc >= 5:3.0
 BuildRequires:	ncurses-devel
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,6 +32,8 @@ Jej celem jest bycie lepsz± odmian± programu 'top'.
 %build
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 %{__make} \
 	CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
