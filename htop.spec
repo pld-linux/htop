@@ -1,5 +1,5 @@
 Summary:	An interactive process viewer
-Summary(pl):	Interaktywna przegl±darka procesów
+Summary(pl.UTF-8):   Interaktywna przeglÄ…darka procesÃ³w
 Name:		htop
 Version:	0.6.5
 Release:	1
@@ -20,9 +20,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 htop is an interactive text-mode process viewer for Linux. It aims to
 be a better 'top'.
 
-%description -l pl
-htop jest interaktywn±, tekstow± przegl±dark± procesów dla Linuksa.
-Jej celem jest bycie lepsz± odmian± programu 'top'.
+%description -l pl.UTF-8
+htop jest interaktywnÄ…, tekstowÄ… przeglÄ…darkÄ… procesÃ³w dla Linuksa.
+Jej celem jest bycie lepszÄ… odmianÄ… programu 'top'.
 
 %prep
 %setup -q
