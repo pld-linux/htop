@@ -1,5 +1,5 @@
 Summary:	An interactive process viewer
-Summary(pl.UTF-8):   Interaktywna przeglądarka procesów
+Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
 Version:	0.6.5
 Release:	1
