@@ -1,12 +1,12 @@
 Summary:	An interactive process viewer
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
-Version:	0.6.6
+Version:	0.7
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
-# Source0-md5:	12c8e6e97bd50a4e0a4730d23675fc7b
+# Source0-md5:	4afc961fa709167e1b434682897991f9
 Patch0:		%{name}-desktop.patch
 URL:		http://htop.sourceforge.net/
 BuildRequires:	autoconf >= 2.57
@@ -34,9 +34,10 @@ Jej celem jest bycie lepszą odmianą programu 'top'.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
-%{__make} \
-	CFLAGS="%{rpmcflags} -I/usr/include/ncurses"
+CPPFLAGS="$CPPFLAGS -I/usr/include/ncurses"
+%configure \
+	--enable-openvz
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
