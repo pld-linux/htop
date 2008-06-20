@@ -1,17 +1,18 @@
 Summary:	An interactive process viewer
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
-Version:	0.7
+Version:	0.8
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
-# Source0-md5:	4afc961fa709167e1b434682897991f9
+# Source0-md5:	b6955f8d75cdb5a3ccea83415cb18815
 Patch0:		%{name}-desktop.patch
 URL:		http://htop.sourceforge.net/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	gcc >= 5:3.0
+BuildRequires:	libtool
 BuildRequires:	ncurses-devel
 BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,6 +31,7 @@ Jej celem jest bycie lepszą odmianą programu 'top'.
 %{__sed} -i -e 's/curses.h/ncurses\/curses.h/' configure.ac
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
@@ -51,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/htop
 %{_desktopdir}/htop.desktop
 %{_mandir}/man1/*
 %{_pixmapsdir}/htop.png
