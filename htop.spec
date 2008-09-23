@@ -1,12 +1,13 @@
 Summary:	An interactive process viewer
+Summary(hu.UTF-8):	Egy interaktív processz megjelenítő
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
-Version:	0.8
+Version:	0.8.1
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
-# Source0-md5:	b6955f8d75cdb5a3ccea83415cb18815
+# Source0-md5:	f0b259ca29175656de48bf0fa0a2e619
 Patch0:		%{name}-desktop.patch
 URL:		http://htop.sourceforge.net/
 BuildRequires:	autoconf >= 2.57
@@ -20,6 +21,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 htop is an interactive text-mode process viewer for Linux. It aims to
 be a better 'top'.
+
+%description -l hu.UTF-8
+htop egy interaktív szöveges módú processz megjelenítő Linuxra.
+Lényegében egy jobb 'top' szeretne lenni.
 
 %description -l pl.UTF-8
 htop jest interaktywną, tekstową przeglądarką procesów dla Linuksa.
