@@ -43,7 +43,9 @@ Jej celem jest bycie lepszą odmianą programu 'top'.
 %{__automake}
 CPPFLAGS="$CPPFLAGS -I/usr/include/ncurses"
 %configure \
-	--enable-openvz
+	--enable-openvz \
+	--enable-vserver \
+	--enable-unicode
 %{__make}
 
 %install
