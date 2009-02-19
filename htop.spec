@@ -3,7 +3,7 @@ Summary(hu.UTF-8):	Egy interaktív processz megjelenítő
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
 Version:	0.8.1
-Release:	4
+Release:	5
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
@@ -45,7 +45,7 @@ Jej celem jest bycie lepszą odmianą programu 'top'.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-CPPFLAGS="$CPPFLAGS -I/usr/include/ncurses"
+CPPFLAGS="$CPPFLAGS -I/usr/include/ncursesw"
 %configure \
 	--enable-openvz \
 	--enable-vserver \
