@@ -1,16 +1,15 @@
---- htop-0.6.6/htop.desktop	2007-05-17 19:03:51.000000000 +0000
-+++ htop-0.6.6/htop.desktop	2007-10-15 19:49:18.000000000 +0000
-@@ -4,9 +4,11 @@
+--- htop-0.8.2-orig/htop.desktop	2009-06-02 17:19:31.807076410 +0200
++++ htop-0.8.2/htop.desktop	2009-06-02 17:20:25.587070284 +0200
+@@ -3,8 +3,11 @@
  Name=Htop
  Type=Application
  Comment=Show System Processes
 +Comment[pl]=Wyświetlanie aktualnego stanu procesów
  Terminal=true
  Exec=htop
--Path=
  Icon=htop
--Categories=ConsoleOnly;System;Application;
+-Categories=ConsoleOnly;System;
 +Categories=ConsoleOnly;System;Monitor;
- GenericName=Process Viewer
 +GenericName[pl]=Przeglądarka procesów
-+# vi: encoding=utf-8
+ GenericName=Process Viewer
++
