@@ -6,7 +6,7 @@ Version:	0.8.3
 Release:	1
 License:	GPL v2
 Group:		Applications/System
-Source0:	http://dl.sourceforge.net/htop/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/htop/%{name}-%{version}.tar.gz
 # Source0-md5:	5c9f093f9eaddf6e77aa6d54c2116d0c
 Patch0:		%{name}-desktop.patch
 Patch2:		%{name}-field-titles.patch
@@ -44,6 +44,7 @@ Jej celem jest bycie lepszą odmianą programu 'top'.
 %{__autoheader}
 %{__automake}
 CPPFLAGS="$CPPFLAGS -I/usr/include/ncursesw"
+LDFLAGS="$LDFLAGS -ltinfow"
 %configure \
 	--enable-openvz \
 	--enable-vserver \
