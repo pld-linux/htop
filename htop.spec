@@ -2,12 +2,12 @@ Summary:	An interactive process viewer
 Summary(hu.UTF-8):	Egy interaktív processz megjelenítő
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
-Version:	0.8.3
+Version:	0.9
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://downloads.sourceforge.net/htop/%{name}-%{version}.tar.gz
-# Source0-md5:	5c9f093f9eaddf6e77aa6d54c2116d0c
+# Source0-md5:	7c5507f35f363f3f40183a2ba3c561f8
 Patch0:		%{name}-desktop.patch
 Patch2:		%{name}-field-titles.patch
 URL:		http://htop.sourceforge.net/
@@ -16,7 +16,6 @@ BuildRequires:	automake
 BuildRequires:	gcc >= 5:3.0
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel
-BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +34,6 @@ Jej celem jest bycie lepszą odmianą programu 'top'.
 %setup -q
 %patch0 -p1
 %patch2 -p1
-%{__sed} -i -e 's/curses.h/ncurses\/curses.h/' configure.ac
 
 %build
 %{__libtoolize}
