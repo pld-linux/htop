@@ -41,12 +41,12 @@ Jej celem jest bycie lepszą odmianą programu 'top'.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-CPPFLAGS="$CPPFLAGS -I/usr/include/ncursesw"
-LDFLAGS="$LDFLAGS -ltinfow"
+CPPFLAGS="%{rpmcppflags} -I/usr/include/ncursesw"
+LDFLAGS="%{rpmldflags} -ltinfow"
 %configure \
 	--enable-openvz \
-	--enable-vserver \
-	--enable-unicode
+	--enable-unicode \
+	--enable-vserver
 %{__make}
 
 %install
@@ -63,5 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/htop
 %{_desktopdir}/htop.desktop
-%{_mandir}/man1/*
 %{_pixmapsdir}/htop.png
+%{_mandir}/man1/htop.1*
