@@ -16,6 +16,8 @@ BuildRequires:	automake
 BuildRequires:	gcc >= 5:3.0
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel
+BuildRequires:	python
+BuildRequires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,6 +36,9 @@ Jej celem jest bycie lepszą odmianą programu 'top'.
 %setup -q
 %patch0 -p1
 %patch2 -p1
+
+# don't require /proc at build time
+sed '/^AC_CHECK_FILE($PROCDIR/d' -i configure.ac
 
 %build
 %{__libtoolize}
