@@ -2,14 +2,13 @@ Summary:	An interactive process viewer
 Summary(hu.UTF-8):	Egy interaktív processz megjelenítő
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
-Version:	0.9
-Release:	2
+Version:	1.0
+Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://downloads.sourceforge.net/htop/%{name}-%{version}.tar.gz
-# Source0-md5:	7c5507f35f363f3f40183a2ba3c561f8
+# Source0-md5:	325112ca7947ea1f6d6441f631e00384
 Patch0:		%{name}-desktop.patch
-Patch2:		%{name}-field-titles.patch
 URL:		http://htop.sourceforge.net/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -35,10 +34,9 @@ Jej celem jest bycie lepszą odmianą programu 'top'.
 %prep
 %setup -q
 %patch0 -p1
-%patch2 -p1
 
 # don't require /proc at build time
-sed '/^AC_CHECK_FILE($PROCDIR/d' -i configure.ac
+sed '/^AC_CHECK_FILE($PROCDIR)/d' -i configure.ac
 
 %build
 %{__libtoolize}
@@ -46,7 +44,7 @@ sed '/^AC_CHECK_FILE($PROCDIR/d' -i configure.ac
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-CPPFLAGS="%{rpmcppflags} -I/usr/include/ncursesw"
+CPPFLAGS="%{rpmcppflags} $(pkg-config --cflags ncursesw)"
 LDFLAGS="%{rpmldflags} -ltinfow"
 %configure \
 	--enable-openvz \
