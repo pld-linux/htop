@@ -3,7 +3,7 @@ Summary(hu.UTF-8):	Egy interaktív processz megjelenítő
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
 Version:	1.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://downloads.sourceforge.net/htop/%{name}-%{version}.tar.gz
@@ -47,7 +47,9 @@ sed '/^AC_CHECK_FILE($PROCDIR)/d' -i configure.ac
 CPPFLAGS="%{rpmcppflags} $(pkg-config --cflags ncursesw)"
 LDFLAGS="%{rpmldflags} -ltinfow"
 %configure \
+	--enable-cgroup \
 	--enable-openvz \
+	--enable-taskstats \
 	--enable-unicode \
 	--enable-vserver
 %{__make}
