@@ -45,7 +45,7 @@ sed '/^AC_CHECK_FILE($PROCDIR)/d' -i configure.ac
 %{__autoheader}
 %{__automake}
 CPPFLAGS="%{rpmcppflags} $(pkg-config --cflags ncursesw)"
-LDFLAGS="%{rpmldflags} -ltinfow"
+LDFLAGS="%{rpmldflags}"
 %configure \
 	--enable-cgroup \
 	--enable-openvz \
