@@ -6,7 +6,7 @@ Version:	1.0.3
 Release:	1
 License:	GPL v2
 Group:		Applications/System
-Source0:	http://hisham.hm/htop/releases/1.0.3/%{name}-%{version}.tar.gz
+Source0:	http://hisham.hm/htop/releases/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	e768b9b55c033d9c1dffda72db3a6ac7
 Patch0:		%{name}-desktop.patch
 URL:		http://hisham.hm/htop/
