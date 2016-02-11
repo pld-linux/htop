@@ -2,12 +2,12 @@ Summary:	An interactive process viewer
 Summary(hu.UTF-8):	Egy interaktív processz megjelenítő
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
-Version:	1.0.3
+Version:	2.0.0
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://hisham.hm/htop/releases/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	e768b9b55c033d9c1dffda72db3a6ac7
+# Source0-md5:	06f76c7d644ce8ae611c9feb10439a30
 Patch0:		%{name}-desktop.patch
 URL:		http://hisham.hm/htop/
 BuildRequires:	autoconf >= 2.65
@@ -47,7 +47,6 @@ sed '/^AC_CHECK_FILE($PROCDIR)/d' -i configure.ac
 CPPFLAGS="%{rpmcppflags} $(pkg-config --cflags ncursesw)"
 %configure \
 	--enable-cgroup \
-	--enable-oom \
 	--enable-openvz \
 	--enable-taskstats \
 	--enable-unicode \

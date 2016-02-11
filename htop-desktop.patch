@@ -1,15 +1,11 @@
---- htop-0.8.2-orig/htop.desktop	2009-06-02 17:19:31.807076410 +0200
-+++ htop-0.8.2/htop.desktop	2009-06-02 17:20:25.587070284 +0200
-@@ -3,8 +3,11 @@
- Name=Htop
- Type=Application
- Comment=Show System Processes
-+Comment[pl]=Wyświetlanie aktualnego stanu procesów
+--- htop-2.0.0/htop.desktop~	2015-10-05 16:22:51.000000000 +0200
++++ htop-2.0.0/htop.desktop	2016-02-11 22:27:07.341302014 +0100
+@@ -32,7 +32,7 @@ Comment[zh_TW]=顯示系統行程
  Terminal=true
  Exec=htop
  Icon=htop
 -Categories=ConsoleOnly;System;
 +Categories=ConsoleOnly;System;Monitor;
-+GenericName[pl]=Przeglądarka procesów
  GenericName=Process Viewer
-+
+ GenericName[ca]=Visor de processos
+ GenericName[de]=Prozessanzeige
