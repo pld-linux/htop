@@ -2,12 +2,12 @@ Summary:	An interactive process viewer
 Summary(hu.UTF-8):	Egy interaktív processz megjelenítő
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
-Version:	2.1.0
+Version:	2.2.0
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://hisham.hm/htop/releases/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	f262b66ad6c194782f4d3a80627e84c8
+# Source0-md5:	0d816b6beed31edc75babcfbf863ffa8
 Patch0:		%{name}-desktop.patch
 URL:		http://hisham.hm/htop/
 BuildRequires:	autoconf >= 2.65
