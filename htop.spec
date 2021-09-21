@@ -19,6 +19,7 @@ BuildRequires:	lm_sensors-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	pkgconfig
 Requires:	libnl >= 3.0
+Suggests:	lm_sensors-libs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
