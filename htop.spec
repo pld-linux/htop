@@ -2,12 +2,12 @@ Summary:	An interactive process viewer
 Summary(hu.UTF-8):	Egy interaktív processz megjelenítő
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
-Version:	3.1.1
+Version:	3.1.2
 Release:	1
 License:	GPL v2
 Group:		Applications/System
-Source0:	https://github.com/htop-dev/htop/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	76ad907a6d43cf38c089e3e9b0100590
+Source0:	https://github.com/htop-dev/htop/releases/download/%{version}/%{name}-%{version}.tar.xz
+# Source0-md5:	13f3be1bb11165c0c46d8b3ff7e17f45
 URL:		https://htop.dev/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake >= 1:1.11
@@ -19,6 +19,8 @@ BuildRequires:	libunwind-devel
 BuildRequires:	lm_sensors-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	pkgconfig
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Requires:	libcap-libs >= 2.21
 Requires:	libnl >= 3.0
 Suggests:	lm_sensors-libs
