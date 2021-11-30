@@ -14,7 +14,6 @@ BuildRequires:	automake >= 1:1.11
 BuildRequires:	gcc >= 5:3.0
 BuildRequires:	libcap-devel >= 2.21
 BuildRequires:	libnl-devel >= 3.0
-BuildRequires:	libtool
 BuildRequires:	libunwind-devel
 BuildRequires:	lm_sensors-devel
 BuildRequires:	ncurses-devel
@@ -45,7 +44,6 @@ Jej celem jest bycie lepszą odmianą programu 'top'.
 sed 's@^[[:space:]]*AC_CHECK_FILE($PROCDIR.*@:@' -i configure.ac
 
 %build
-%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
