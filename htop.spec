@@ -21,7 +21,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	libcap-libs >= 2.21
-Requires:	libnl >= 3.0
+Suggests:	libnl >= 3.0
 Suggests:	lm_sensors-libs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
