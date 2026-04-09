@@ -2,15 +2,16 @@ Summary:	An interactive process viewer
 Summary(hu.UTF-8):	Egy interaktív processz megjelenítő
 Summary(pl.UTF-8):	Interaktywna przeglądarka procesów
 Name:		htop
-Version:	3.4.1
+Version:	3.5.0
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	https://github.com/htop-dev/htop/releases/download/%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	ba71a5f7cfd85887e7a20e5226b27bd9
+# Source0-md5:	122d7a89633949c0bdbf6a3fb12dc725
 URL:		https://htop.dev/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake >= 1:1.11
+BuildRequires:	binutils-devel
 BuildRequires:	gcc >= 5:3.0
 BuildRequires:	libcap-devel >= 2.21
 BuildRequires:	libnl-devel >= 3.0
@@ -49,6 +50,7 @@ sed 's@^[[:space:]]*AC_CHECK_FILE($PROCDIR.*@:@' -i configure.ac
 %{__autoheader}
 %{__automake}
 %configure \
+	--enable-backtrace=unwind-ptrace \
 	--enable-openvz \
 	--enable-unicode \
 	--enable-vserver
